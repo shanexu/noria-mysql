@@ -781,7 +781,8 @@ impl NoriaBackend {
             .map(|te| ops.fetch_add(1, atomic::Ordering::AcqRel) % te == 0)
             .unwrap_or(false)
         {
-            noria::trace_my_next_op();
+            // TODO fix
+            // noria::trace_my_next_op();
         }
 
         let result = if let Some(ref update_fields) = q.on_duplicate {
@@ -905,7 +906,8 @@ impl NoriaBackend {
             .map(|te| ops.fetch_add(1, atomic::Ordering::AcqRel) % te == 0)
             .unwrap_or(false)
         {
-            noria::trace_my_next_op();
+            // TODO fix
+            // noria::trace_my_next_op();
         }
 
         // if first lookup fails, there's no reason to try the others
@@ -973,7 +975,8 @@ impl NoriaBackend {
             .map(|te| ops.fetch_add(1, atomic::Ordering::AcqRel) % te == 0)
             .unwrap_or(false)
         {
-            noria::trace_my_next_op();
+            // TODO fix
+            // noria::trace_my_next_op();
         }
 
         trace!("update::update");
